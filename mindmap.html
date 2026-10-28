@@ -40,7 +40,7 @@ function update(){
   const n=g.selectAll(".node").data(h.descendants(),d=>d.id||(d.id=Math.random())).join(e=>{const q=e.append("g").attr("class","node");q.append("circle");q.append("text");return q});
   n.attr("transform",d=>`translate(${d.y},${d.x})`).classed("hit",d=>d.hit).on("click",(e,d)=>{d.children=d.children?null:d._c;update()});
   n.select("circle").attr("r",d=>d.depth<2?7:5).attr("fill",d=>d._c&&!d.children?col(d.data.st):"var(--bg)").attr("stroke",d=>d.depth<2?"var(--fg)":col(d.data.st));
-  n.select("text").attr("dy","0.32em").attr("x",d=>d._c?-10:10).attr("text-anchor",d=>d._c?"end":"start").text(d=>d.data.name);
+  n.select("text").attr("dy",d=>d.depth<2?"-0.9em":"0.32em").attr("x",d=>d.depth<2?0:10).attr("text-anchor",d=>d.depth<2?"middle":"start").style("font-weight",d=>d.depth<3?600:400).text(d=>d.data.name);
 }
 update();
 document.getElementById("ex").onclick=()=>{h.each(d=>{d.children=d.depth<2?d._c:null});update()};
