@@ -30,17 +30,25 @@ const root={name:"SALSA",children:Object.entries(G).map(([g,vs])=>({name:g,child
   if(v.note)ch.unshift({name:v.note,st:"none"});
   return {name:v.v+(v.syn.length?"  ["+v.syn.join(", ")+"]":""),key:v.v,st:best(v.o.map(o=>o.s).concat(["proposed"])),children:ch}})}))};
 const col=s=>`var(--${s||"rule"})`;
-const svg=d3.select("#s"),g=svg.append("g").attr("transform","translate(80,20)");
-const dx=22,dy=230;const h=d3.hierarchy(root);
+const svg=d3.select("#s"),g=svg.append("g");
+const h=d3.hierarchy(root);
 h.descendants().forEach(d=>{d._c=d.children;if(d.depth>=2)d.children=null});
+const RING=[0,170,330,500,680];   // radius of each depth: SALSA, group, verb, dataset, object
+const rad=(a,r)=>[r*Math.cos(a-Math.PI/2),r*Math.sin(a-Math.PI/2)];
 function update(){
-  d3.tree().nodeSize([dx,dy])(h);let x0=1e9,x1=-1e9;h.each(d=>{x0=Math.min(x0,d.x);x1=Math.max(x1,d.x)});
-  const maxy=d3.max(h.descendants(),d=>d.y)+360;svg.attr("width",maxy).attr("height",x1-x0+60);g.attr("transform",`translate(80,${30-x0})`);
-  g.selectAll(".link").data(h.links(),d=>d.target.id||(d.target.id=Math.random())).join("path").attr("class","link").attr("d",d3.linkHorizontal().x(d=>d.y).y(d=>d.x));
+  const leaves=h.leaves().length,R=Math.max(RING[d3.max(h.descendants(),d=>d.depth)],leaves*16/(2*Math.PI));
+  const scale=R/RING[Math.max(1,d3.max(h.descendants(),d=>d.depth))];
+  d3.tree().size([2*Math.PI,1]).separation((a,b)=>(a.parent==b.parent?1:2)/Math.max(1,a.depth))(h);
+  h.each(d=>d.y=RING[d.depth]*scale);
+  const W=2*(R+340);svg.attr("width",W).attr("height",W).attr("viewBox",[-W/2,-W/2,W,W]);g.attr("transform",null);
+  g.selectAll(".link").data(h.links(),d=>d.target.id||(d.target.id=Math.random())).join("path").attr("class","link").attr("d",d3.linkRadial().angle(d=>d.x).radius(d=>d.y));
   const n=g.selectAll(".node").data(h.descendants(),d=>d.id||(d.id=Math.random())).join(e=>{const q=e.append("g").attr("class","node");q.append("circle");q.append("text");return q});
-  n.attr("transform",d=>`translate(${d.y},${d.x})`).classed("hit",d=>d.hit).on("click",(e,d)=>{d.children=d.children?null:d._c;update()});
-  n.select("circle").attr("r",d=>d.depth<2?7:5).attr("fill",d=>d._c&&!d.children?col(d.data.st):"var(--bg)").attr("stroke",d=>d.depth<2?"var(--fg)":col(d.data.st));
-  n.select("text").attr("dy",d=>d.depth<2?"-0.9em":"0.32em").attr("x",d=>d.depth<2?0:10).attr("text-anchor",d=>d.depth<2?"middle":"start").style("font-weight",d=>d.depth<3?600:400).text(d=>d.data.name);
+  n.attr("transform",d=>`translate(${rad(d.x,d.y)})`).classed("hit",d=>d.hit).on("click",(e,d)=>{d.children=d.children?null:d._c;update()});
+  n.select("circle").attr("r",d=>d.depth==0?10:d.depth<2?7:5).attr("fill",d=>d._c&&!d.children?col(d.data.st):"var(--bg)").attr("stroke",d=>d.depth<2?"var(--fg)":col(d.data.st));
+  n.select("text").attr("dy","0.32em").style("font-weight",d=>d.depth<3?600:400).style("font-size",d=>d.depth==0?"18px":null)
+   .attr("transform",d=>{if(d.depth==0)return "translate(0,-22)";const deg=d.x*180/Math.PI-90,fl=d.x>Math.PI;return `rotate(${fl?deg+180:deg}) translate(${fl?-10:10},0)`})
+   .attr("text-anchor",d=>d.depth==0?"middle":d.x>Math.PI?"end":"start").text(d=>d.data.name);
+  const w=document.getElementById("wrap");w.scrollLeft=(W-w.clientWidth)/2;w.scrollTop=(W-w.clientHeight)/2;
 }
 update();
 document.getElementById("ex").onclick=()=>{h.each(d=>{d.children=d.depth<2?d._c:null});update()};
