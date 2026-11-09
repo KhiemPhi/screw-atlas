@@ -1,0 +1,823 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SALSA Verb Demos</title>
+<meta name="description" content="Every verb of the SALSA task vocabulary with an example command, its task screw, and a simulated robot clip.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:wght@600&display=swap">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--fg:#1b1f27;--mute:#5d6676;--line:#d9dde4;--accent:#c2410c;--ok:#15803d;--no:#b91c1c;--mono:"IBM Plex Mono",ui-monospace,monospace;--sans:"IBM Plex Sans",system-ui,sans-serif;--serif:"IBM Plex Serif",Georgia,serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13161b;--card:#1c2027;--fg:#e6e8ec;--mute:#9aa3b2;--line:#2c323c;--accent:#fb923c;--ok:#4ade80;--no:#f87171;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#13161b;--card:#1c2027;--fg:#e6e8ec;--mute:#9aa3b2;--line:#2c323c;--accent:#fb923c;--ok:#4ade80;--no:#f87171;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 var(--sans)}
+main{max-width:1200px;margin:0 auto;padding:32px 16px 64px}
+h1{font:600 clamp(1.5rem,3.5vw,2.1rem)/1.2 var(--serif);margin:0 0 .3rem}
+.lead{color:var(--mute);max-width:70ch;margin:0 0 1rem}
+a{color:var(--accent)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:1rem 0 1.4rem;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2}
+.bar input{flex:1 1 220px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
+.bar button{padding:6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--fg);cursor:pointer;font:13px var(--sans)}
+.bar button.on{border-color:var(--accent);color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:400/189;object-fit:cover;background:#000;display:block}
+.noclip{aspect-ratio:400/189;display:grid;place-items:center;color:var(--mute);font:13px var(--mono)}
+.body{padding:10px 12px 12px}h3{margin:0;font:600 1.05rem var(--sans)}.syn{color:var(--mute);font-weight:400;font-size:.85rem;margin-left:.3rem}
+.cmd{margin:.3rem 0;font-style:italic}.task,.also{margin:.2rem 0;font-size:.85rem;color:var(--mute)}
+.screw{margin:.3rem 0 0;font:12.5px/1.45 var(--mono)}code{font:12.5px var(--mono)}
+.badge{display:inline-block;font:11px var(--mono);padding:1px 6px;border-radius:999px;border:1px solid var(--line);margin-left:4px}
+.badge.new{color:var(--accent);border-color:var(--accent)}.badge.ok{color:var(--ok)}.badge.no{color:var(--no)}
+.note{color:var(--mute);font-size:.85rem;max-width:80ch}
+</style></head><body><main>
+<p><a href="index.html">&larr; SALSA</a> &middot; <a href="mindmap.html">Verb Map</a> &middot; <a href="atlas.html">Screw Atlas</a></p>
+<h1>Verb demos</h1>
+<p class="lead">Each of the 112 verbs in the SALSA vocabulary, with an example command, the task it runs, the screw(s) that task executes, and a simulated clip (Kinova Gen3 + Robotiq 2F-85 or Franka Panda, MuJoCo). Verbs marked <span class="badge new">new task</span> had no task before; their tasks, fixtures and success checks are new.</p>
+<div class="bar"><input id="q" type="search" placeholder="Find a verb, synonym or task" aria-label="Find a verb"><button data-g="" class="on">All</button><button data-g="reach-transport-contact">Reach, transport, contact</button><button data-g="containers-devices">Containers and devices</button><button data-g="tools-assembly">Tools and assembly</button><button data-g="aggregate">Several objects</button></div>
+<div class="grid" id="grid"><article class="card" data-g="reach-transport-contact" data-q="reach  reach reach for the adjustable wrench">
+<img loading="lazy" src="X/reach__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: reach for the adjustable wrench">
+<div class="body"><h3>reach<span class="syn"></span></h3>
+<p class="cmd">&ldquo;reach for the adjustable wrench&rdquo;</p>
+<p class="task">task <code>reach</code> </p>
+<p class="screw">approach, close on the object (touch), open, back off (2 cm screw, not executed)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="move  lift move the power drill">
+<img loading="lazy" src="S/lift__obj_000004.webp" alt="simulated robot: move the power drill">
+<div class="body"><h3>move<span class="syn"></span></h3>
+<p class="cmd">&ldquo;move the power drill&rdquo;</p>
+<p class="task">task <code>lift</code> </p>
+<p class="screw">translate 15 cm up (pitch inf)</p>
+<p class="also">also: <code>slide</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="go  go go to the green pad with the gelatin box">
+<img loading="lazy" src="V/go__kinova.webp" alt="simulated robot: go to the green pad with the gelatin box">
+<div class="body"><h3>go<span class="syn"></span></h3>
+<p class="cmd">&ldquo;go to the green pad with the gelatin box&rdquo;</p>
+<p class="task">task <code>go</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate to the pad (pitch inf)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="return  return return the gelatin box to where it was">
+<img loading="lazy" src="V/return__kinova.webp" alt="simulated robot: return the gelatin box to where it was">
+<div class="body"><h3>return<span class="syn"></span></h3>
+<p class="cmd">&ldquo;return the gelatin box to where it was&rdquo;</p>
+<p class="task">task <code>return</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate +15 cm sideways, translate back, translate down to the table</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="stop stay wait stop stop and hold the gelatin box still">
+<img loading="lazy" src="V/stop__kinova.webp" alt="simulated robot: stop and hold the gelatin box still">
+<div class="body"><h3>stop<span class="syn"> [stay, wait]</span></h3>
+<p class="cmd">&ldquo;stop and hold the gelatin box still&rdquo;</p>
+<p class="task">task <code>stop</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">zero screw (hold the pose 2 s)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="pick  lift pick up the power drill">
+<img loading="lazy" src="S/lift__obj_000004.webp" alt="simulated robot: pick up the power drill">
+<div class="body"><h3>pick<span class="syn"> (up)</span></h3>
+<p class="cmd">&ldquo;pick up the power drill&rdquo;</p>
+<p class="task">task <code>lift</code> </p>
+<p class="screw">translate 15 cm up (pitch inf)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="lift raise hoist lift lift the power drill">
+<img loading="lazy" src="S/lift__obj_000004.webp" alt="simulated robot: lift the power drill">
+<div class="body"><h3>lift<span class="syn"> [raise, hoist]</span></h3>
+<p class="cmd">&ldquo;lift the power drill&rdquo;</p>
+<p class="task">task <code>lift</code> </p>
+<p class="screw">translate 15 cm up (pitch inf)</p>
+<p class="also">also: <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="place  place place the pots pans over there">
+<img loading="lazy" src="X/place__r_handal_pots_pans_obj_000032.webp" alt="simulated robot: place the pots pans over there">
+<div class="body"><h3>place<span class="syn"></span></h3>
+<p class="cmd">&ldquo;place the pots pans over there&rdquo;</p>
+<p class="task">task <code>place</code> </p>
+<p class="screw">lift 15 cm, translate 15 cm sideways, translate down to the table, release</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="put  place put down the pots pans">
+<img loading="lazy" src="X/place__r_handal_pots_pans_obj_000032.webp" alt="simulated robot: put down the pots pans">
+<div class="body"><h3>put<span class="syn"> (down, away, in)</span></h3>
+<p class="cmd">&ldquo;put down the pots pans&rdquo;</p>
+<p class="task">task <code>place</code> </p>
+<p class="screw">lift 15 cm, translate 15 cm sideways, translate down to the table, release</p>
+<p class="also">also: <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="stack  stack stack the gelatin box on the block">
+<img loading="lazy" src="X/stack__r_ycbv_009_gelatin_box.webp" alt="simulated robot: stack the gelatin box on the block">
+<div class="body"><h3>stack<span class="syn"></span></h3>
+<p class="cmd">&ldquo;stack the gelatin box on the block&rdquo;</p>
+<p class="task">task <code>stack</code> </p>
+<p class="screw">lift 15 cm, translate over the block, translate down onto it, release</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="take  slide take out the drawer">
+<img loading="lazy" src="S/slide__101.webp" alt="simulated robot: take out the drawer">
+<div class="body"><h3>take<span class="syn"> (out, away)</span></h3>
+<p class="cmd">&ldquo;take out the drawer&rdquo;</p>
+<p class="task">task <code>slide</code> </p>
+<p class="screw">translate 12 cm along the drawer&#x27;s attachment normal, out of the body (prismatic, pitch inf)</p>
+<p class="also">also: <code>lift</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="grasp  lift grasp the power drill">
+<img loading="lazy" src="S/lift__obj_000004.webp" alt="simulated robot: grasp the power drill">
+<div class="body"><h3>grasp<span class="syn"></span></h3>
+<p class="cmd">&ldquo;grasp the power drill&rdquo;</p>
+<p class="task">task <code>lift</code> </p>
+<p class="screw">translate 15 cm up (pitch inf)</p>
+<p class="also">also: <code>grasp</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="grab grip lift grab the power drill">
+<img loading="lazy" src="S/lift__obj_000004.webp" alt="simulated robot: grab the power drill">
+<div class="body"><h3>grab<span class="syn"> [grip]</span></h3>
+<p class="cmd">&ldquo;grab the power drill&rdquo;</p>
+<p class="task">task <code>lift</code> </p>
+<p class="screw">translate 15 cm up (pitch inf)</p>
+<p class="also">also: <code>grasp</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="pinch  squeeze pinch the tongs">
+<img loading="lazy" src="S/squeeze__101.webp" alt="simulated robot: pinch the tongs">
+<div class="body"><h3>pinch<span class="syn"></span></h3>
+<p class="cmd">&ldquo;pinch the tongs&rdquo;</p>
+<p class="task">task <code>squeeze</code> </p>
+<p class="screw">rotate 20 deg about the arms&#x27; joint axis, turning the free arm down (revolute)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="hold  stop hold the gelatin box">
+<img loading="lazy" src="V/stop__kinova.webp" alt="simulated robot: hold the gelatin box">
+<div class="body"><h3>hold<span class="syn"></span></h3>
+<p class="cmd">&ldquo;hold the gelatin box&rdquo;</p>
+<p class="task">task <code>stop</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">zero screw (hold the pose 2 s)</p>
+<p class="also">also: <code>grasp</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="carry  lift carry the power drill">
+<img loading="lazy" src="S/lift__obj_000004.webp" alt="simulated robot: carry the power drill">
+<div class="body"><h3>carry<span class="syn"></span></h3>
+<p class="cmd">&ldquo;carry the power drill&rdquo;</p>
+<p class="task">task <code>lift</code> </p>
+<p class="screw">translate 15 cm up (pitch inf)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="release  reach release the adjustable wrench">
+<img loading="lazy" src="X/reach__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: release the adjustable wrench">
+<div class="body"><h3>release<span class="syn"></span></h3>
+<p class="cmd">&ldquo;release the adjustable wrench&rdquo;</p>
+<p class="task">task <code>reach</code> </p>
+<p class="screw">approach, close on the object (touch), open, back off (2 cm screw, not executed)</p>
+<p class="also">also: <code>squeeze</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="catch  catch catch the gelatin box">
+<img loading="lazy" src="V/catch__kinova.webp" alt="simulated robot: catch the gelatin box">
+<div class="body"><h3>catch<span class="syn"></span></h3>
+<p class="cmd">&ldquo;catch the gelatin box&rdquo;</p>
+<p class="task">task <code>catch</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">zero screw (the hand waits); the object slides 20 cm into the open fingers, which close as it arrives</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="drop  drop drop the adjustable wrench">
+<img loading="lazy" src="X/drop__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: drop the adjustable wrench">
+<div class="body"><h3>drop<span class="syn"></span></h3>
+<p class="cmd">&ldquo;drop the adjustable wrench&rdquo;</p>
+<p class="task">task <code>drop</code> </p>
+<p class="screw">lift 20 cm, open the gripper</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="throw chuck toss throw throw the adjustable wrench">
+<img loading="lazy" src="X/throw__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: throw the adjustable wrench">
+<div class="body"><h3>throw<span class="syn"> [chuck, toss]</span></h3>
+<p class="cmd">&ldquo;throw the adjustable wrench&rdquo;</p>
+<p class="task">task <code>throw</code> </p>
+<p class="screw">lift 15 cm, translate 30 cm away fast, open at 60 % of the stroke</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="flip  pivot flip the box over">
+<img loading="lazy" src="S/pivot__101.webp" alt="simulated robot: flip the box over">
+<div class="body"><h3>flip<span class="syn"></span></h3>
+<p class="cmd">&ldquo;flip the box over&rdquo;</p>
+<p class="task">task <code>pivot</code> </p>
+<p class="screw">rotate 50 deg about the box&#x27;s far bottom edge (revolute, pitch 0)</p>
+<p class="also">also: <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="rotate  turn rotate the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: rotate the bottle cap">
+<div class="body"><h3>rotate<span class="syn"></span></h3>
+<p class="cmd">&ldquo;rotate the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+<p class="also">also: <code>twist</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="push nudge push push the adjustable wrench">
+<img loading="lazy" src="X/push__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: push the adjustable wrench">
+<div class="body"><h3>push<span class="syn"> [nudge] (away)</span></h3>
+<p class="cmd">&ldquo;push the adjustable wrench&rdquo;</p>
+<p class="task">task <code>push</code> </p>
+<p class="screw">translate 15 cm along the table (not lifted)</p>
+<p class="also">also: <code>press</code>, <code>slide</code>, <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="pull  slide pull the drawer">
+<img loading="lazy" src="S/slide__101.webp" alt="simulated robot: pull the drawer">
+<div class="body"><h3>pull<span class="syn"> (down, up, towards)</span></h3>
+<p class="cmd">&ldquo;pull the drawer&rdquo;</p>
+<p class="task">task <code>slide</code> </p>
+<p class="screw">translate 12 cm along the drawer&#x27;s attachment normal, out of the body (prismatic, pitch inf)</p>
+<p class="also">also: <code>hinge</code>, <code>push</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="roll  turn roll the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: roll the bottle cap">
+<div class="body"><h3>roll<span class="syn"></span></h3>
+<p class="cmd">&ldquo;roll the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="slide drag slide slide the drawer">
+<img loading="lazy" src="S/slide__101.webp" alt="simulated robot: slide the drawer">
+<div class="body"><h3>slide<span class="syn"> [drag]</span></h3>
+<p class="cmd">&ldquo;slide the drawer&rdquo;</p>
+<p class="task">task <code>slide</code> </p>
+<p class="screw">translate 12 cm along the drawer&#x27;s attachment normal, out of the body (prismatic, pitch inf)</p>
+<p class="also">also: <code>press</code>, <code>push</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="shift  push shift the adjustable wrench to the side">
+<img loading="lazy" src="X/push__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: shift the adjustable wrench to the side">
+<div class="body"><h3>shift<span class="syn"></span></h3>
+<p class="cmd">&ldquo;shift the adjustable wrench to the side&rdquo;</p>
+<p class="task">task <code>push</code> </p>
+<p class="screw">translate 15 cm along the table (not lifted)</p>
+<p class="also">also: <code>slide</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="tilt  pivot tilt the box">
+<img loading="lazy" src="S/pivot__101.webp" alt="simulated robot: tilt the box">
+<div class="body"><h3>tilt<span class="syn"></span></h3>
+<p class="cmd">&ldquo;tilt the box&rdquo;</p>
+<p class="task">task <code>pivot</code> </p>
+<p class="screw">rotate 50 deg about the box&#x27;s far bottom edge (revolute, pitch 0)</p>
+<p class="also">also: <code>pour</code>, <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="pivot  pivot pivot the box on its edge">
+<img loading="lazy" src="S/pivot__101.webp" alt="simulated robot: pivot the box on its edge">
+<div class="body"><h3>pivot<span class="syn"></span></h3>
+<p class="cmd">&ldquo;pivot the box on its edge&rdquo;</p>
+<p class="task">task <code>pivot</code> </p>
+<p class="screw">rotate 50 deg about the box&#x27;s far bottom edge (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="swing  swing swing the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: swing the hammer">
+<div class="body"><h3>swing<span class="syn"></span></h3>
+<p class="cmd">&ldquo;swing the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+<p class="also">also: <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="swivel  turn swivel the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: swivel the bottle cap">
+<div class="body"><h3>swivel<span class="syn"></span></h3>
+<p class="cmd">&ldquo;swivel the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+<p class="also">also: <code>hinge</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="bring  handover bring me the screwdriver">
+<img loading="lazy" src="S/handover__obj_000003.webp" alt="simulated robot: bring me the screwdriver">
+<div class="body"><h3>bring<span class="syn"></span></h3>
+<p class="cmd">&ldquo;bring me the screwdriver&rdquo;</p>
+<p class="task">task <code>handover</code> </p>
+<p class="screw">lift 15 cm, rotate about the vertical through the held end so the handle faces the person</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="give  handover give me the screwdriver">
+<img loading="lazy" src="S/handover__obj_000003.webp" alt="simulated robot: give me the screwdriver">
+<div class="body"><h3>give<span class="syn"></span></h3>
+<p class="cmd">&ldquo;give me the screwdriver&rdquo;</p>
+<p class="task">task <code>handover</code> </p>
+<p class="screw">lift 15 cm, rotate about the vertical through the held end so the handle faces the person</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="fetch  handover fetch the screwdriver">
+<img loading="lazy" src="S/handover__obj_000003.webp" alt="simulated robot: fetch the screwdriver">
+<div class="body"><h3>fetch<span class="syn"></span></h3>
+<p class="cmd">&ldquo;fetch the screwdriver&rdquo;</p>
+<p class="task">task <code>handover</code> </p>
+<p class="screw">lift 15 cm, rotate about the vertical through the held end so the handle faces the person</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="get  handover get me the screwdriver">
+<img loading="lazy" src="S/handover__obj_000003.webp" alt="simulated robot: get me the screwdriver">
+<div class="body"><h3>get<span class="syn"></span></h3>
+<p class="cmd">&ldquo;get me the screwdriver&rdquo;</p>
+<p class="task">task <code>handover</code> </p>
+<p class="screw">lift 15 cm, rotate about the vertical through the held end so the handle faces the person</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="touch  reach touch the adjustable wrench">
+<img loading="lazy" src="X/reach__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: touch the adjustable wrench">
+<div class="body"><h3>touch<span class="syn"></span></h3>
+<p class="cmd">&ldquo;touch the adjustable wrench&rdquo;</p>
+<p class="task">task <code>reach</code> </p>
+<p class="screw">approach, close on the object (touch), open, back off (2 cm screw, not executed)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="squeeze  squeeze squeeze the tongs">
+<img loading="lazy" src="S/squeeze__101.webp" alt="simulated robot: squeeze the tongs">
+<div class="body"><h3>squeeze<span class="syn"></span></h3>
+<p class="cmd">&ldquo;squeeze the tongs&rdquo;</p>
+<p class="task">task <code>squeeze</code> </p>
+<p class="screw">rotate 20 deg about the arms&#x27; joint axis, turning the free arm down (revolute)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="press  press press the button">
+<img loading="lazy" src="S/press__101.webp" alt="simulated robot: press the button">
+<div class="body"><h3>press<span class="syn"></span></h3>
+<p class="cmd">&ldquo;press the button&rdquo;</p>
+<p class="task">task <code>press</code> </p>
+<p class="screw">translate 7 mm into the body along the button&#x27;s normal (prismatic, push)</p>
+<p class="also">also: <code>squeeze</code></p>
+</div></article><article class="card" data-g="reach-transport-contact" data-q="poke  press poke the button">
+<img loading="lazy" src="S/press__101.webp" alt="simulated robot: poke the button">
+<div class="body"><h3>poke<span class="syn"></span></h3>
+<p class="cmd">&ldquo;poke the button&rdquo;</p>
+<p class="task">task <code>press</code> </p>
+<p class="screw">translate 7 mm into the body along the button&#x27;s normal (prismatic, push)</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="scrub rub polish grind wipe scrub the table with the sponge">
+<img loading="lazy" src="X/wipe__r_ycb_026_sponge.webp" alt="simulated robot: scrub the table with the sponge">
+<div class="body"><h3>scrub<span class="syn"> [rub, polish, grind]</span></h3>
+<p class="cmd">&ldquo;scrub the table with the sponge&rdquo;</p>
+<p class="task">task <code>wipe</code> </p>
+<p class="screw">translate down to the table, two strokes of +-8 cm along it</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="scratch  scratch scratch the table with the screwdriver">
+<img loading="lazy" src="V/scratch__kinova.webp" alt="simulated robot: scratch the table with the screwdriver">
+<div class="body"><h3>scratch<span class="syn"></span></h3>
+<p class="cmd">&ldquo;scratch the table with the screwdriver&rdquo;</p>
+<p class="task">task <code>scratch</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">rotate 30 deg about the horizontal line through the grasp (tip down), then 4 translations +-3 cm</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="brush  wipe brush the table with the sponge">
+<img loading="lazy" src="X/wipe__r_ycb_026_sponge.webp" alt="simulated robot: brush the table with the sponge">
+<div class="body"><h3>brush<span class="syn"></span></h3>
+<p class="cmd">&ldquo;brush the table with the sponge&rdquo;</p>
+<p class="task">task <code>wipe</code> </p>
+<p class="screw">translate down to the table, two strokes of +-8 cm along it</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="wipe  wipe wipe the table with the sponge">
+<img loading="lazy" src="X/wipe__r_ycb_026_sponge.webp" alt="simulated robot: wipe the table with the sponge">
+<div class="body"><h3>wipe<span class="syn"></span></h3>
+<p class="cmd">&ldquo;wipe the table with the sponge&rdquo;</p>
+<p class="task">task <code>wipe</code> </p>
+<p class="screw">translate down to the table, two strokes of +-8 cm along it</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="wash  wipe wash the table with the sponge">
+<img loading="lazy" src="X/wipe__r_ycb_026_sponge.webp" alt="simulated robot: wash the table with the sponge">
+<div class="body"><h3>wash<span class="syn"></span></h3>
+<p class="cmd">&ldquo;wash the table with the sponge&rdquo;</p>
+<p class="task">task <code>wipe</code> </p>
+<p class="screw">translate down to the table, two strokes of +-8 cm along it</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="clean  wipe clean the table with the sponge">
+<img loading="lazy" src="X/wipe__r_ycb_026_sponge.webp" alt="simulated robot: clean the table with the sponge">
+<div class="body"><h3>clean<span class="syn"></span></h3>
+<p class="cmd">&ldquo;clean the table with the sponge&rdquo;</p>
+<p class="task">task <code>wipe</code> </p>
+<p class="screw">translate down to the table, two strokes of +-8 cm along it</p>
+
+</div></article><article class="card" data-g="reach-transport-contact" data-q="clear  clear clear the gelatin box off the red zone">
+<img loading="lazy" src="V/clear__kinova.webp" alt="simulated robot: clear the gelatin box off the red zone">
+<div class="body"><h3>clear<span class="syn"></span></h3>
+<p class="cmd">&ldquo;clear the gelatin box off the red zone&rdquo;</p>
+<p class="task">task <code>clear</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate 18 cm away from the zone centre along the table</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="pour  pour pour out the measuring cup">
+<img loading="lazy" src="X/pour__r_handal_measuring_cup_obj_000001.webp" alt="simulated robot: pour out the measuring cup">
+<div class="body"><h3>pour<span class="syn"></span></h3>
+<p class="cmd">&ldquo;pour out the measuring cup&rdquo;</p>
+<p class="task">task <code>pour</code> </p>
+<p class="screw">lift, carry the top over the bowl, rotate 100 deg about the horizontal line through the top edge</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="scoop  scoop scoop with the ladle">
+<img loading="lazy" src="S/scoop__obj_000001.webp" alt="simulated robot: scoop with the ladle">
+<div class="body"><h3>scoop<span class="syn"></span></h3>
+<p class="cmd">&ldquo;scoop with the ladle&rdquo;</p>
+<p class="task">task <code>scoop</code> </p>
+<p class="screw">carry the head into the bowl at 45 deg, push down, curve out and up along a parabola</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="stir  stir stir the bowl with the whisk">
+<img loading="lazy" src="S/stir__obj_000021.webp" alt="simulated robot: stir the bowl with the whisk">
+<div class="body"><h3>stir<span class="syn"></span></h3>
+<p class="cmd">&ldquo;stir the bowl with the whisk&rdquo;</p>
+<p class="task">task <code>stir</code> </p>
+<p class="screw">lift 15 cm, carry the head into the bowl, rotate 120 deg about the bowl&#x27;s vertical axis</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="mix  stir mix the bowl with the whisk">
+<img loading="lazy" src="S/stir__obj_000021.webp" alt="simulated robot: mix the bowl with the whisk">
+<div class="body"><h3>mix<span class="syn"></span></h3>
+<p class="cmd">&ldquo;mix the bowl with the whisk&rdquo;</p>
+<p class="task">task <code>stir</code> </p>
+<p class="screw">lift 15 cm, carry the head into the bowl, rotate 120 deg about the bowl&#x27;s vertical axis</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="beat  stir beat the bowl with the whisk">
+<img loading="lazy" src="S/stir__obj_000021.webp" alt="simulated robot: beat the bowl with the whisk">
+<div class="body"><h3>beat<span class="syn"></span></h3>
+<p class="cmd">&ldquo;beat the bowl with the whisk&rdquo;</p>
+<p class="task">task <code>stir</code> </p>
+<p class="screw">lift 15 cm, carry the head into the bowl, rotate 120 deg about the bowl&#x27;s vertical axis</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="shake  shake shake the adjustable wrench">
+<img loading="lazy" src="X/shake__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: shake the adjustable wrench">
+<div class="body"><h3>shake<span class="syn"></span></h3>
+<p class="cmd">&ldquo;shake the adjustable wrench&rdquo;</p>
+<p class="task">task <code>shake</code> </p>
+<p class="screw">lift 15 cm, three +-5 cm vertical translations</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="jiggle  shake jiggle the adjustable wrench">
+<img loading="lazy" src="X/shake__r_handal_adjustable_wrench_obj_000006.webp" alt="simulated robot: jiggle the adjustable wrench">
+<div class="body"><h3>jiggle<span class="syn"></span></h3>
+<p class="cmd">&ldquo;jiggle the adjustable wrench&rdquo;</p>
+<p class="task">task <code>shake</code> </p>
+<p class="screw">lift 15 cm, three +-5 cm vertical translations</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="cut  cut cut with the knife">
+<img loading="lazy" src="S/cut__101.webp" alt="simulated robot: cut with the knife">
+<div class="body"><h3>cut<span class="syn"></span></h3>
+<p class="cmd">&ldquo;cut with the knife&rdquo;</p>
+<p class="task">task <code>cut</code> </p>
+<p class="screw">lift 8 cm, translate 10 cm along the blade (thick -&gt; thin end)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="chop  cut chop with the knife">
+<img loading="lazy" src="S/cut__101.webp" alt="simulated robot: chop with the knife">
+<div class="body"><h3>chop<span class="syn"></span></h3>
+<p class="cmd">&ldquo;chop with the knife&rdquo;</p>
+<p class="task">task <code>cut</code> </p>
+<p class="screw">lift 8 cm, translate 10 cm along the blade (thick -&gt; thin end)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="slice  cut slice with the knife">
+<img loading="lazy" src="S/cut__101.webp" alt="simulated robot: slice with the knife">
+<div class="body"><h3>slice<span class="syn"></span></h3>
+<p class="cmd">&ldquo;slice with the knife&rdquo;</p>
+<p class="task">task <code>cut</code> </p>
+<p class="screw">lift 8 cm, translate 10 cm along the blade (thick -&gt; thin end)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="carve  cut carve with the knife">
+<img loading="lazy" src="S/cut__101.webp" alt="simulated robot: carve with the knife">
+<div class="body"><h3>carve<span class="syn"></span></h3>
+<p class="cmd">&ldquo;carve with the knife&rdquo;</p>
+<p class="task">task <code>cut</code> </p>
+<p class="screw">lift 8 cm, translate 10 cm along the blade (thick -&gt; thin end)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="shear  cut shear with the knife">
+<img loading="lazy" src="S/cut__101.webp" alt="simulated robot: shear with the knife">
+<div class="body"><h3>shear<span class="syn"></span></h3>
+<p class="cmd">&ldquo;shear with the knife&rdquo;</p>
+<p class="task">task <code>cut</code> </p>
+<p class="screw">lift 8 cm, translate 10 cm along the blade (thick -&gt; thin end)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="break  break break the wooden spoon">
+<img loading="lazy" src="V/break__kinova.webp" alt="simulated robot: break the wooden spoon">
+<div class="body"><h3>break<span class="syn"></span></h3>
+<p class="cmd">&ldquo;break the wooden spoon&rdquo;</p>
+<p class="task">task <code>break</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">rotate 40 deg about the horizontal line through the clamped end (the clamp snaps at 4 N m)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="crack  turn crack open the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: crack open the bottle cap">
+<div class="body"><h3>crack<span class="syn"></span></h3>
+<p class="cmd">&ldquo;crack open the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="pierce  pierce pierce the foam with the screwdriver">
+<img loading="lazy" src="V/pierce__kinova.webp" alt="simulated robot: pierce the foam with the screwdriver">
+<div class="body"><h3>pierce<span class="syn"></span></h3>
+<p class="cmd">&ldquo;pierce the foam with the screwdriver&rdquo;</p>
+<p class="task">task <code>pierce</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">rotate 90 deg tip down, translate 6 cm along the tool axis into the target</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="fork  fork fork the ball with the fork">
+<img loading="lazy" src="V/fork__kinova.webp" alt="simulated robot: fork the ball with the fork">
+<div class="body"><h3>fork<span class="syn"></span></h3>
+<p class="cmd">&ldquo;fork the ball with the fork&rdquo;</p>
+<p class="task">task <code>fork</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">rotate 90 deg tip down, translate down into the food, translate 10 cm up</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="load  hinge load the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: load the box lid">
+<div class="body"><h3>load<span class="syn"> (some machine)</span></h3>
+<p class="cmd">&ldquo;load the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="unload  hinge unload the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: unload the box lid">
+<div class="body"><h3>unload<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unload the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="open  hinge open the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: open the box lid">
+<div class="body"><h3>open<span class="syn"></span></h3>
+<p class="cmd">&ldquo;open the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+<p class="also">also: <code>turn</code>, <code>slide</code>, <code>squeeze</code>, <code>lift</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="close shut hinge close the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: close the box lid">
+<div class="body"><h3>close<span class="syn"> [shut]</span></h3>
+<p class="cmd">&ldquo;close the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+<p class="also">also: <code>turn</code>, <code>slide</code>, <code>squeeze</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="seal  turn seal the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: seal the bottle cap">
+<div class="body"><h3>seal<span class="syn"></span></h3>
+<p class="cmd">&ldquo;seal the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="unseal  turn unseal the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: unseal the bottle cap">
+<div class="body"><h3>unseal<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unseal the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="cover  hinge cover the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: cover the box lid">
+<div class="body"><h3>cover<span class="syn"></span></h3>
+<p class="cmd">&ldquo;cover the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+<p class="also">also: <code>slide</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="uncover  hinge uncover the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: uncover the box lid">
+<div class="body"><h3>uncover<span class="syn"></span></h3>
+<p class="cmd">&ldquo;uncover the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+<p class="also">also: <code>slide</code>, <code>lift</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="wrap  wrap wrap the cable around the post">
+<img loading="lazy" src="V/wrap__kinova.webp" alt="simulated robot: wrap the cable around the post">
+<div class="body"><h3>wrap<span class="syn"></span></h3>
+<p class="cmd">&ldquo;wrap the cable around the post&rdquo;</p>
+<p class="task">task <code>wrap</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">the object travels a helix about the post&#x27;s vertical axis: 720 deg, 3 cm rise per turn, radius 20 -&gt; 6 cm (hand orientation fixed)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="unwrap  unwrap unwrap the cable from the post">
+<img loading="lazy" src="V/unwrap__kinova.webp" alt="simulated robot: unwrap the cable from the post">
+<div class="body"><h3>unwrap<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unwrap the cable from the post&rdquo;</p>
+<p class="task">task <code>unwrap</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">the wrap helix, then its reverse (-720 deg)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="lock  turn lock the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: lock the bottle cap">
+<div class="body"><h3>lock<span class="syn"></span></h3>
+<p class="cmd">&ldquo;lock the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="unlock  turn unlock the bottle cap">
+<img loading="lazy" src="S/turn__101.webp" alt="simulated robot: unlock the bottle cap">
+<div class="body"><h3>unlock<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unlock the bottle cap&rdquo;</p>
+<p class="task">task <code>turn</code> </p>
+<p class="screw">rotate 180 deg about the cap&#x27;s own (spine) axis through the cap (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="turn on  press turn on the button">
+<img loading="lazy" src="S/press__101.webp" alt="simulated robot: turn on the button">
+<div class="body"><h3>turn on<span class="syn"></span></h3>
+<p class="cmd">&ldquo;turn on the button&rdquo;</p>
+<p class="task">task <code>press</code> </p>
+<p class="screw">translate 7 mm into the body along the button&#x27;s normal (prismatic, push)</p>
+<p class="also">also: <code>turn</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="turn off  press turn off the button">
+<img loading="lazy" src="S/press__101.webp" alt="simulated robot: turn off the button">
+<div class="body"><h3>turn off<span class="syn"></span></h3>
+<p class="cmd">&ldquo;turn off the button&rdquo;</p>
+<p class="task">task <code>press</code> </p>
+<p class="screw">translate 7 mm into the body along the button&#x27;s normal (prismatic, push)</p>
+<p class="also">also: <code>turn</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="switch  switch switch the places of the gelatin box and the blue block">
+<img loading="lazy" src="V/switch__kinova.webp" alt="simulated robot: switch the places of the gelatin box and the blue block">
+<div class="body"><h3>switch<span class="syn"> (places)</span></h3>
+<p class="cmd">&ldquo;switch the places of the gelatin box and the blue block&rdquo;</p>
+<p class="task">task <code>switch</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">A: translate aside; B: translate to A&#x27;s spot; A: translate to B&#x27;s spot (three place screws)</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="switch on  press switch on the button">
+<img loading="lazy" src="S/press__101.webp" alt="simulated robot: switch on the button">
+<div class="body"><h3>switch on<span class="syn"></span></h3>
+<p class="cmd">&ldquo;switch on the button&rdquo;</p>
+<p class="task">task <code>press</code> </p>
+<p class="screw">translate 7 mm into the body along the button&#x27;s normal (prismatic, push)</p>
+<p class="also">also: <code>turn</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="switch off  press switch off the button">
+<img loading="lazy" src="S/press__101.webp" alt="simulated robot: switch off the button">
+<div class="body"><h3>switch off<span class="syn"></span></h3>
+<p class="cmd">&ldquo;switch off the button&rdquo;</p>
+<p class="task">task <code>press</code> </p>
+<p class="screw">translate 7 mm into the body along the button&#x27;s normal (prismatic, push)</p>
+<p class="also">also: <code>turn</code></p>
+</div></article><article class="card" data-g="containers-devices" data-q="insert  insert insert the foam brick into the slot">
+<img loading="lazy" src="V/insert__r_ycbv_061_foam_brick__x.webp" alt="simulated robot: insert the foam brick into the slot">
+<div class="body"><h3>insert<span class="syn"></span></h3>
+<p class="cmd">&ldquo;insert the foam brick into the slot&rdquo;</p>
+<p class="task">task <code>insert</code> </p>
+<p class="screw">lift, translate over the slot, translate 7 cm down into it</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="plug  insert plug in the foam brick">
+<img loading="lazy" src="V/insert__r_ycbv_061_foam_brick__x.webp" alt="simulated robot: plug in the foam brick">
+<div class="body"><h3>plug<span class="syn"> (in)</span></h3>
+<p class="cmd">&ldquo;plug in the foam brick&rdquo;</p>
+<p class="task">task <code>insert</code> </p>
+<p class="screw">lift, translate over the slot, translate 7 cm down into it</p>
+
+</div></article><article class="card" data-g="containers-devices" data-q="unplug  unplug unplug the foam brick">
+<img loading="lazy" src="V/unplug__kinova.webp" alt="simulated robot: unplug the foam brick">
+<div class="body"><h3>unplug<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unplug the foam brick&rdquo;</p>
+<p class="task">task <code>unplug</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">translate up 15 cm along the slot axis</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="screw  fasten screw in with the screwdriver">
+<img loading="lazy" src="F/fasten__obj_000001_loosen.webp" alt="simulated robot: screw in with the screwdriver">
+<div class="body"><h3>screw<span class="syn"></span></h3>
+<p class="cmd">&ldquo;screw in with the screwdriver&rdquo;</p>
+<p class="task">task <code>fasten</code> </p>
+<p class="screw">lift 30 cm, helix -90 deg about the screwdriver shaft</p>
+<p class="also">also: <code>turn</code>, <code>twist</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="unscrew  fasten unscrew with the screwdriver">
+<img loading="lazy" src="F/fasten__obj_000001_loosen.webp" alt="simulated robot: unscrew with the screwdriver">
+<div class="body"><h3>unscrew<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unscrew with the screwdriver&rdquo;</p>
+<p class="task">task <code>fasten</code> </p>
+<p class="screw">lift 30 cm, helix -90 deg about the screwdriver shaft</p>
+<p class="also">also: <code>turn</code>, <code>twist</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="loosen  fasten loosen the screw with the screwdriver">
+<img loading="lazy" src="F/fasten__obj_000001_loosen.webp" alt="simulated robot: loosen the screw with the screwdriver">
+<div class="body"><h3>loosen<span class="syn"></span></h3>
+<p class="cmd">&ldquo;loosen the screw with the screwdriver&rdquo;</p>
+<p class="task">task <code>fasten</code> </p>
+<p class="screw">lift 30 cm, helix -90 deg about the screwdriver shaft</p>
+<p class="also">also: <code>turn</code>, <code>twist</code>, <code>squeeze</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="tighten  fasten tighten the screw with the screwdriver">
+<img loading="lazy" src="F/fasten__obj_000001_loosen.webp" alt="simulated robot: tighten the screw with the screwdriver">
+<div class="body"><h3>tighten<span class="syn"></span></h3>
+<p class="cmd">&ldquo;tighten the screw with the screwdriver&rdquo;</p>
+<p class="task">task <code>fasten</code> </p>
+<p class="screw">lift 30 cm, helix -90 deg about the screwdriver shaft</p>
+<p class="also">also: <code>turn</code>, <code>twist</code>, <code>squeeze</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="fasten  fasten fasten the screw with the screwdriver">
+<img loading="lazy" src="F/fasten__obj_000001_loosen.webp" alt="simulated robot: fasten the screw with the screwdriver">
+<div class="body"><h3>fasten<span class="syn"></span></h3>
+<p class="cmd">&ldquo;fasten the screw with the screwdriver&rdquo;</p>
+<p class="task">task <code>fasten</code> </p>
+<p class="screw">lift 30 cm, helix -90 deg about the screwdriver shaft</p>
+<p class="also">also: <code>turn</code>, <code>twist</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="unfasten  fasten unfasten the screw with the screwdriver">
+<img loading="lazy" src="F/fasten__obj_000001_loosen.webp" alt="simulated robot: unfasten the screw with the screwdriver">
+<div class="body"><h3>unfasten<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unfasten the screw with the screwdriver&rdquo;</p>
+<p class="task">task <code>fasten</code> </p>
+<p class="screw">lift 30 cm, helix -90 deg about the screwdriver shaft</p>
+<p class="also">also: <code>turn</code>, <code>twist</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="hammer  swing hammer with the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: hammer with the hammer">
+<div class="body"><h3>hammer<span class="syn"></span></h3>
+<p class="cmd">&ldquo;hammer with the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="drive  swing drive the nail in with the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: drive the nail in with the hammer">
+<div class="body"><h3>drive<span class="syn"> (it in)</span></h3>
+<p class="cmd">&ldquo;drive the nail in with the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="hit  swing hit it with the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: hit it with the hammer">
+<div class="body"><h3>hit<span class="syn"></span></h3>
+<p class="cmd">&ldquo;hit it with the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+<p class="also">also: <code>press</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="chisel carve chisel chisel the block with the screwdriver">
+<img loading="lazy" src="V/chisel__kinova.webp" alt="simulated robot: chisel the block with the screwdriver">
+<div class="body"><h3>chisel<span class="syn"> [carve]</span></h3>
+<p class="cmd">&ldquo;chisel the block with the screwdriver&rdquo;</p>
+<p class="task">task <code>chisel</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">rotate 30 deg tip down, translate down to the block, translate 6 cm along it</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="twist  twist twist the adjustable wrench">
+<img loading="lazy" src="X/twist__r_handal_adjustable_wrench_obj_000037.webp" alt="simulated robot: twist the adjustable wrench">
+<div class="body"><h3>twist<span class="syn"></span></h3>
+<p class="cmd">&ldquo;twist the adjustable wrench&rdquo;</p>
+<p class="task">task <code>twist</code> </p>
+<p class="screw">lift 10 cm, helix 90 deg about the vertical through the wrench&#x27;s jaw end</p>
+<p class="also">also: <code>turn</code>, <code>fasten</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="bend  bend bend the cable">
+<img loading="lazy" src="V/bend__kinova.webp" alt="simulated robot: bend the cable">
+<div class="body"><h3>bend<span class="syn"></span></h3>
+<p class="cmd">&ldquo;bend the cable&rdquo;</p>
+<p class="task">task <code>bend</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">rotate 90 deg about the vertical line through the clamped end while the ends close 40 % (a spiral; pitch 0)</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="wrench  twist wrench the nut with the adjustable wrench">
+<img loading="lazy" src="X/twist__r_handal_adjustable_wrench_obj_000037.webp" alt="simulated robot: wrench the nut with the adjustable wrench">
+<div class="body"><h3>wrench<span class="syn"></span></h3>
+<p class="cmd">&ldquo;wrench the nut with the adjustable wrench&rdquo;</p>
+<p class="task">task <code>twist</code> </p>
+<p class="screw">lift 10 cm, helix 90 deg about the vertical through the wrench&#x27;s jaw end</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="pluck  pluck pluck the pear">
+<img loading="lazy" src="V/pluck__kinova.webp" alt="simulated robot: pluck the pear">
+<div class="body"><h3>pluck<span class="syn"></span></h3>
+<p class="cmd">&ldquo;pluck the pear&rdquo;</p>
+<p class="task">task <code>pluck</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate up (the stem snaps at 8 N)</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="join  join join the gelatin box to the block">
+<img loading="lazy" src="V/join__kinova.webp" alt="simulated robot: join the gelatin box to the block">
+<div class="body"><h3>join<span class="syn"></span></h3>
+<p class="cmd">&ldquo;join the gelatin box to the block&rdquo;</p>
+<p class="task">task <code>join</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate until the object&#x27;s face meets the block&#x27;s side face</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="glue  glue glue the gelatin box onto the block">
+<img loading="lazy" src="V/glue__kinova.webp" alt="simulated robot: glue the gelatin box onto the block">
+<div class="body"><h3>glue<span class="syn"></span></h3>
+<p class="cmd">&ldquo;glue the gelatin box onto the block&rdquo;</p>
+<p class="task">task <code>glue</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate onto the block, translate 5 mm down (press), release</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="weld  weld weld the seam with the screwdriver">
+<img loading="lazy" src="V/weld__kinova.webp" alt="simulated robot: weld the seam with the screwdriver">
+<div class="body"><h3>weld<span class="syn"></span></h3>
+<p class="cmd">&ldquo;weld the seam with the screwdriver&rdquo;</p>
+<p class="task">task <code>weld</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate along the seam line (10 cm) at fixed standoff</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="drill  drill drill into the foam with the screwdriver">
+<img loading="lazy" src="V/drill__kinova.webp" alt="simulated robot: drill into the foam with the screwdriver">
+<div class="body"><h3>drill<span class="syn"></span></h3>
+<p class="cmd">&ldquo;drill into the foam with the screwdriver&rdquo;</p>
+<p class="task">task <code>drill</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">rotate 90 deg tip down, helix about the tool axis: 180 deg with 3 cm feed (pitch 6 cm/rev... 1.9 cm/rad)</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="measure  measure measure the box with the ruler">
+<img loading="lazy" src="X/measure__r_proc_ruler.webp" alt="simulated robot: measure the box with the ruler">
+<div class="body"><h3>measure<span class="syn"></span></h3>
+<p class="cmd">&ldquo;measure the box with the ruler&rdquo;</p>
+<p class="task">task <code>measure</code> <span class="badge no">this clip: failed</span></p>
+<p class="screw">turn the ruler parallel to the box edge (rotate about vertical), lay it 1 cm from the edge, release</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="assemble  assemble assemble the foam brick into the socket">
+<img loading="lazy" src="V/assemble__kinova.webp" alt="simulated robot: assemble the foam brick into the socket">
+<div class="body"><h3>assemble<span class="syn"></span></h3>
+<p class="cmd">&ldquo;assemble the foam brick into the socket&rdquo;</p>
+<p class="task">task <code>assemble</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate over the slot, translate 7 cm down, rotate 90 deg about the slot&#x27;s vertical axis</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="disassemble  disassemble take the foam brick out of the socket">
+<img loading="lazy" src="V/disassemble__kinova.webp" alt="simulated robot: take the foam brick out of the socket">
+<div class="body"><h3>disassemble<span class="syn"></span></h3>
+<p class="cmd">&ldquo;take the foam brick out of the socket&rdquo;</p>
+<p class="task">task <code>disassemble</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">rotate -90 deg about the slot&#x27;s vertical axis, translate 15 cm up</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="fold  hinge fold the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: fold the box lid">
+<div class="body"><h3>fold<span class="syn"></span></h3>
+<p class="cmd">&ldquo;fold the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="unfold  hinge unfold the box lid">
+<img loading="lazy" src="S/hinge__101.webp" alt="simulated robot: unfold the box lid">
+<div class="body"><h3>unfold<span class="syn"></span></h3>
+<p class="cmd">&ldquo;unfold the box lid&rdquo;</p>
+<p class="task">task <code>hinge</code> </p>
+<p class="screw">rotate 70 deg about the hinge line at the lid&#x27;s far top edge (revolute, pitch 0)</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="tap  swing tap it with the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: tap it with the hammer">
+<div class="body"><h3>tap<span class="syn"></span></h3>
+<p class="cmd">&ldquo;tap it with the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+<p class="also">also: <code>press</code></p>
+</div></article><article class="card" data-g="tools-assembly" data-q="knock  swing knock with the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: knock with the hammer">
+<div class="body"><h3>knock<span class="syn"></span></h3>
+<p class="cmd">&ldquo;knock with the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+
+</div></article><article class="card" data-g="tools-assembly" data-q="strike whack slam swing strike with the hammer">
+<img loading="lazy" src="S/swing__obj_000005.webp" alt="simulated robot: strike with the hammer">
+<div class="body"><h3>strike<span class="syn"> [whack, slam]</span></h3>
+<p class="cmd">&ldquo;strike with the hammer&rdquo;</p>
+<p class="task">task <code>swing</code> </p>
+<p class="screw">lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down</p>
+
+</div></article><article class="card" data-g="aggregate" data-q="surround  surround carry the gelatin box around the post">
+<img loading="lazy" src="V/surround__kinova.webp" alt="simulated robot: carry the gelatin box around the post">
+<div class="body"><h3>surround<span class="syn"></span></h3>
+<p class="cmd">&ldquo;carry the gelatin box around the post&rdquo;</p>
+<p class="task">task <code>surround</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">rotate 360 deg about the post&#x27;s vertical axis (pitch 0)</p>
+
+</div></article><article class="card" data-g="aggregate" data-q="corral  corral corral the gelatin box into the pen">
+<img loading="lazy" src="V/corral__kinova.webp" alt="simulated robot: corral the gelatin box into the pen">
+<div class="body"><h3>corral<span class="syn"></span></h3>
+<p class="cmd">&ldquo;corral the gelatin box into the pen&rdquo;</p>
+<p class="task">task <code>corral</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge no">panda: failed</span></p>
+<p class="screw">translate along the table into the pen</p>
+
+</div></article><article class="card" data-g="aggregate" data-q="gather  gather gather the gelatin box to the pad">
+<img loading="lazy" src="V/gather__kinova.webp" alt="simulated robot: gather the gelatin box to the pad">
+<div class="body"><h3>gather<span class="syn"></span></h3>
+<p class="cmd">&ldquo;gather the gelatin box to the pad&rdquo;</p>
+<p class="task">task <code>gather</code><span class="badge new">new task</span> <span class="badge ok">kinova: success</span> <span class="badge ok">panda: success</span></p>
+<p class="screw">translate along the table to the target point</p>
+
+</div></article><article class="card" data-g="aggregate" data-q="dump  pour dump the measuring cup">
+<img loading="lazy" src="X/pour__r_handal_measuring_cup_obj_000001.webp" alt="simulated robot: dump the measuring cup">
+<div class="body"><h3>dump<span class="syn"></span></h3>
+<p class="cmd">&ldquo;dump the measuring cup&rdquo;</p>
+<p class="task">task <code>pour</code> </p>
+<p class="screw">lift, carry the top over the bowl, rotate 100 deg about the horizontal line through the top edge</p>
+
+</div></article></div>
+<p class="note">Physics notes for the new tasks: pierce / drill targets are contact-free volumes (depth is measured, not cut); fork attaches the food with a point constraint once the tines are 1 cm inside; pluck and break are welds that switch off above 8 N / 30 N; wrap, unwrap and bend use MuJoCo's cable model; catch is a sliding catch (the object arrives along the table at about 2 m/s). Verbs that share a task show that task's clip on a representative object.</p>
+</main><script>
+const q=document.getElementById('q'),cards=[...document.querySelectorAll('.card')];let g='';
+function f(){const s=q.value.trim().toLowerCase();cards.forEach(c=>{c.style.display=((!g||c.dataset.g===g)&&(!s||c.dataset.q.includes(s)))?'':'none'})}
+q.addEventListener('input',f);document.querySelectorAll('.bar button').forEach(b=>b.addEventListener('click',()=>{g=b.dataset.g;document.querySelectorAll('.bar button').forEach(x=>x.classList.toggle('on',x===b));f()}));
+</script></body></html>

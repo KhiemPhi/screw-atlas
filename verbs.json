@@ -1,0 +1,2064 @@
+[
+ {
+  "verb": "reach",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "reach"
+  ],
+  "demo_task": "reach",
+  "new": false,
+  "clip": "X/reach__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "approach, close on the object (touch), open, back off (2 cm screw, not executed)",
+  "command": "reach for the adjustable wrench"
+ },
+ {
+  "verb": "move",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "lift",
+   "slide"
+  ],
+  "demo_task": "lift",
+  "new": false,
+  "clip": "S/lift__obj_000004.webp",
+  "obj": "power drill",
+  "screw": "translate 15 cm up (pitch inf)",
+  "command": "move the power drill"
+ },
+ {
+  "verb": "go",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "go"
+  ],
+  "demo_task": "go",
+  "new": true,
+  "clip": "V/go__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 26.7,
+   "rise_cm": 7.6,
+   "to_target_cm": 0.2
+  },
+  "screw": "translate to the pad (pitch inf)",
+  "command": "go to the green pad with the gelatin box"
+ },
+ {
+  "verb": "return",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "return"
+  ],
+  "demo_task": "return",
+  "new": true,
+  "clip": "V/return__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 0.1,
+   "rise_cm": 0.0,
+   "away_cm": 14.8
+  },
+  "screw": "translate +15 cm sideways, translate back, translate down to the table",
+  "command": "return the gelatin box to where it was"
+ },
+ {
+  "verb": "stop",
+  "synonyms": [
+   "stay",
+   "wait"
+  ],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "stop"
+  ],
+  "demo_task": "stop",
+  "new": true,
+  "clip": "V/stop__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 0.2,
+   "rise_cm": 9.5,
+   "drift_cm": 0.05
+  },
+  "screw": "zero screw (hold the pose 2 s)",
+  "command": "stop and hold the gelatin box still"
+ },
+ {
+  "verb": "pick",
+  "synonyms": [],
+  "particles": [
+   "up"
+  ],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "lift"
+  ],
+  "demo_task": "lift",
+  "new": false,
+  "clip": "S/lift__obj_000004.webp",
+  "obj": "power drill",
+  "screw": "translate 15 cm up (pitch inf)",
+  "command": "pick up the power drill"
+ },
+ {
+  "verb": "lift",
+  "synonyms": [
+   "raise",
+   "hoist"
+  ],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "lift",
+   "hinge"
+  ],
+  "demo_task": "lift",
+  "new": false,
+  "clip": "S/lift__obj_000004.webp",
+  "obj": "power drill",
+  "screw": "translate 15 cm up (pitch inf)",
+  "command": "lift the power drill"
+ },
+ {
+  "verb": "place",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "place"
+  ],
+  "demo_task": "place",
+  "new": false,
+  "clip": "X/place__r_handal_pots_pans_obj_000032.webp",
+  "obj": "pots pans",
+  "screw": "lift 15 cm, translate 15 cm sideways, translate down to the table, release",
+  "command": "place the pots pans over there"
+ },
+ {
+  "verb": "put",
+  "synonyms": [],
+  "particles": [
+   "down",
+   "away",
+   "in"
+  ],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "place",
+   "hinge"
+  ],
+  "demo_task": "place",
+  "new": false,
+  "clip": "X/place__r_handal_pots_pans_obj_000032.webp",
+  "obj": "pots pans",
+  "screw": "lift 15 cm, translate 15 cm sideways, translate down to the table, release",
+  "command": "put down the pots pans"
+ },
+ {
+  "verb": "stack",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "stack"
+  ],
+  "demo_task": "stack",
+  "new": false,
+  "clip": "X/stack__r_ycbv_009_gelatin_box.webp",
+  "obj": "gelatin box",
+  "screw": "lift 15 cm, translate over the block, translate down onto it, release",
+  "command": "stack the gelatin box on the block"
+ },
+ {
+  "verb": "take",
+  "synonyms": [],
+  "particles": [
+   "out",
+   "away"
+  ],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "lift",
+   "slide"
+  ],
+  "demo_task": "slide",
+  "new": false,
+  "clip": "S/slide__101.webp",
+  "obj": "drawer",
+  "screw": "translate 12 cm along the drawer's attachment normal, out of the body (prismatic, pitch inf)",
+  "command": "take out the drawer"
+ },
+ {
+  "verb": "grasp",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "grasp"
+  ],
+  "demo_task": "lift",
+  "new": false,
+  "clip": "S/lift__obj_000004.webp",
+  "obj": "power drill",
+  "screw": "translate 15 cm up (pitch inf)",
+  "command": "grasp the power drill"
+ },
+ {
+  "verb": "grab",
+  "synonyms": [
+   "grip"
+  ],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "grasp"
+  ],
+  "demo_task": "lift",
+  "new": false,
+  "clip": "S/lift__obj_000004.webp",
+  "obj": "power drill",
+  "screw": "translate 15 cm up (pitch inf)",
+  "command": "grab the power drill"
+ },
+ {
+  "verb": "pinch",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "squeeze"
+  ],
+  "demo_task": "squeeze",
+  "new": false,
+  "clip": "S/squeeze__101.webp",
+  "obj": "tongs",
+  "screw": "rotate 20 deg about the arms' joint axis, turning the free arm down (revolute)",
+  "command": "pinch the tongs"
+ },
+ {
+  "verb": "hold",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "grasp"
+  ],
+  "demo_task": "stop",
+  "new": true,
+  "clip": "V/stop__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 0.2,
+   "rise_cm": 9.5,
+   "drift_cm": 0.05
+  },
+  "screw": "zero screw (hold the pose 2 s)",
+  "command": "hold the gelatin box"
+ },
+ {
+  "verb": "carry",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "lift"
+  ],
+  "demo_task": "lift",
+  "new": false,
+  "clip": "S/lift__obj_000004.webp",
+  "obj": "power drill",
+  "screw": "translate 15 cm up (pitch inf)",
+  "command": "carry the power drill"
+ },
+ {
+  "verb": "release",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "reach",
+   "squeeze"
+  ],
+  "demo_task": "reach",
+  "new": false,
+  "clip": "X/reach__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "approach, close on the object (touch), open, back off (2 cm screw, not executed)",
+  "command": "release the adjustable wrench"
+ },
+ {
+  "verb": "catch",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "catch"
+  ],
+  "demo_task": "catch",
+  "new": true,
+  "clip": "V/catch__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "rise_cm": -0.0,
+   "gap_at_close_cm": 1.8
+  },
+  "screw": "zero screw (the hand waits); the object slides 20 cm into the open fingers, which close as it arrives",
+  "command": "catch the gelatin box"
+ },
+ {
+  "verb": "drop",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "drop"
+  ],
+  "demo_task": "drop",
+  "new": false,
+  "clip": "X/drop__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "lift 20 cm, open the gripper",
+  "command": "drop the adjustable wrench"
+ },
+ {
+  "verb": "throw",
+  "synonyms": [
+   "chuck",
+   "toss"
+  ],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "throw"
+  ],
+  "demo_task": "throw",
+  "new": false,
+  "clip": "X/throw__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "lift 15 cm, translate 30 cm away fast, open at 60 % of the stroke",
+  "command": "throw the adjustable wrench"
+ },
+ {
+  "verb": "flip",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "hinge",
+   "pivot"
+  ],
+  "demo_task": "pivot",
+  "new": false,
+  "clip": "S/pivot__101.webp",
+  "obj": "box",
+  "screw": "rotate 50 deg about the box's far bottom edge (revolute, pitch 0)",
+  "command": "flip the box over"
+ },
+ {
+  "verb": "rotate",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "turn",
+   "twist"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "rotate the bottle cap"
+ },
+ {
+  "verb": "push",
+  "synonyms": [
+   "nudge"
+  ],
+  "particles": [
+   "away"
+  ],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "press",
+   "slide",
+   "hinge",
+   "push"
+  ],
+  "demo_task": "push",
+  "new": false,
+  "clip": "X/push__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "translate 15 cm along the table (not lifted)",
+  "command": "push the adjustable wrench"
+ },
+ {
+  "verb": "pull",
+  "synonyms": [],
+  "particles": [
+   "down",
+   "up",
+   "towards"
+  ],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "slide",
+   "hinge",
+   "push"
+  ],
+  "demo_task": "slide",
+  "new": false,
+  "clip": "S/slide__101.webp",
+  "obj": "drawer",
+  "screw": "translate 12 cm along the drawer's attachment normal, out of the body (prismatic, pitch inf)",
+  "command": "pull the drawer"
+ },
+ {
+  "verb": "roll",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "turn"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "roll the bottle cap"
+ },
+ {
+  "verb": "slide",
+  "synonyms": [
+   "drag"
+  ],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "slide",
+   "press",
+   "push"
+  ],
+  "demo_task": "slide",
+  "new": false,
+  "clip": "S/slide__101.webp",
+  "obj": "drawer",
+  "screw": "translate 12 cm along the drawer's attachment normal, out of the body (prismatic, pitch inf)",
+  "command": "slide the drawer"
+ },
+ {
+  "verb": "shift",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "slide",
+   "push"
+  ],
+  "demo_task": "push",
+  "new": false,
+  "clip": "X/push__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "translate 15 cm along the table (not lifted)",
+  "command": "shift the adjustable wrench to the side"
+ },
+ {
+  "verb": "tilt",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "pivot",
+   "pour",
+   "hinge"
+  ],
+  "demo_task": "pivot",
+  "new": false,
+  "clip": "S/pivot__101.webp",
+  "obj": "box",
+  "screw": "rotate 50 deg about the box's far bottom edge (revolute, pitch 0)",
+  "command": "tilt the box"
+ },
+ {
+  "verb": "pivot",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "pivot"
+  ],
+  "demo_task": "pivot",
+  "new": false,
+  "clip": "S/pivot__101.webp",
+  "obj": "box",
+  "screw": "rotate 50 deg about the box's far bottom edge (revolute, pitch 0)",
+  "command": "pivot the box on its edge"
+ },
+ {
+  "verb": "swing",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "swing",
+   "hinge"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "swing the hammer"
+ },
+ {
+  "verb": "swivel",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "turn",
+   "hinge"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "swivel the bottle cap"
+ },
+ {
+  "verb": "bring",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "handover"
+  ],
+  "demo_task": "handover",
+  "new": false,
+  "clip": "S/handover__obj_000003.webp",
+  "obj": "screwdriver",
+  "screw": "lift 15 cm, rotate about the vertical through the held end so the handle faces the person",
+  "command": "bring me the screwdriver"
+ },
+ {
+  "verb": "give",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "handover"
+  ],
+  "demo_task": "handover",
+  "new": false,
+  "clip": "S/handover__obj_000003.webp",
+  "obj": "screwdriver",
+  "screw": "lift 15 cm, rotate about the vertical through the held end so the handle faces the person",
+  "command": "give me the screwdriver"
+ },
+ {
+  "verb": "fetch",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "handover"
+  ],
+  "demo_task": "handover",
+  "new": false,
+  "clip": "S/handover__obj_000003.webp",
+  "obj": "screwdriver",
+  "screw": "lift 15 cm, rotate about the vertical through the held end so the handle faces the person",
+  "command": "fetch the screwdriver"
+ },
+ {
+  "verb": "get",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "handover"
+  ],
+  "demo_task": "handover",
+  "new": false,
+  "clip": "S/handover__obj_000003.webp",
+  "obj": "screwdriver",
+  "screw": "lift 15 cm, rotate about the vertical through the held end so the handle faces the person",
+  "command": "get me the screwdriver"
+ },
+ {
+  "verb": "touch",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "reach"
+  ],
+  "demo_task": "reach",
+  "new": false,
+  "clip": "X/reach__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "approach, close on the object (touch), open, back off (2 cm screw, not executed)",
+  "command": "touch the adjustable wrench"
+ },
+ {
+  "verb": "squeeze",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "squeeze"
+  ],
+  "demo_task": "squeeze",
+  "new": false,
+  "clip": "S/squeeze__101.webp",
+  "obj": "tongs",
+  "screw": "rotate 20 deg about the arms' joint axis, turning the free arm down (revolute)",
+  "command": "squeeze the tongs"
+ },
+ {
+  "verb": "press",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "press",
+   "squeeze"
+  ],
+  "demo_task": "press",
+  "new": false,
+  "clip": "S/press__101.webp",
+  "obj": "button",
+  "screw": "translate 7 mm into the body along the button's normal (prismatic, push)",
+  "command": "press the button"
+ },
+ {
+  "verb": "poke",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "press"
+  ],
+  "demo_task": "press",
+  "new": false,
+  "clip": "S/press__101.webp",
+  "obj": "button",
+  "screw": "translate 7 mm into the body along the button's normal (prismatic, push)",
+  "command": "poke the button"
+ },
+ {
+  "verb": "scrub",
+  "synonyms": [
+   "rub",
+   "polish",
+   "grind"
+  ],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "wipe"
+  ],
+  "demo_task": "wipe",
+  "new": false,
+  "clip": "X/wipe__r_ycb_026_sponge.webp",
+  "obj": "sponge",
+  "screw": "translate down to the table, two strokes of +-8 cm along it",
+  "command": "scrub the table with the sponge"
+ },
+ {
+  "verb": "scratch",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "scratch"
+  ],
+  "demo_task": "scratch",
+  "new": true,
+  "clip": "V/scratch__kinova.webp",
+  "obj": "screwdriver",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.6686,
+   "moved_cm": 16.0,
+   "rise_cm": -6.0,
+   "contact_frac": 1.0
+  },
+  "screw": "rotate 30 deg about the horizontal line through the grasp (tip down), then 4 translations +-3 cm",
+  "command": "scratch the table with the screwdriver"
+ },
+ {
+  "verb": "brush",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "wipe"
+  ],
+  "demo_task": "wipe",
+  "new": false,
+  "clip": "X/wipe__r_ycb_026_sponge.webp",
+  "obj": "sponge",
+  "screw": "translate down to the table, two strokes of +-8 cm along it",
+  "command": "brush the table with the sponge"
+ },
+ {
+  "verb": "wipe",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "wipe"
+  ],
+  "demo_task": "wipe",
+  "new": false,
+  "clip": "X/wipe__r_ycb_026_sponge.webp",
+  "obj": "sponge",
+  "screw": "translate down to the table, two strokes of +-8 cm along it",
+  "command": "wipe the table with the sponge"
+ },
+ {
+  "verb": "wash",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "wipe"
+  ],
+  "demo_task": "wipe",
+  "new": false,
+  "clip": "X/wipe__r_ycb_026_sponge.webp",
+  "obj": "sponge",
+  "screw": "translate down to the table, two strokes of +-8 cm along it",
+  "command": "wash the table with the sponge"
+ },
+ {
+  "verb": "clean",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "wipe"
+  ],
+  "demo_task": "wipe",
+  "new": false,
+  "clip": "X/wipe__r_ycb_026_sponge.webp",
+  "obj": "sponge",
+  "screw": "translate down to the table, two strokes of +-8 cm along it",
+  "command": "clean the table with the sponge"
+ },
+ {
+  "verb": "clear",
+  "synonyms": [],
+  "particles": [],
+  "group": "reach-transport-contact",
+  "tasks": [
+   "clear"
+  ],
+  "demo_task": "clear",
+  "new": true,
+  "clip": "V/clear__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 14.9,
+   "rise_cm": 0.0,
+   "from_zone_cm": 14.9
+  },
+  "screw": "translate 18 cm away from the zone centre along the table",
+  "command": "clear the gelatin box off the red zone"
+ },
+ {
+  "verb": "pour",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "pour"
+  ],
+  "demo_task": "pour",
+  "new": false,
+  "clip": "X/pour__r_handal_measuring_cup_obj_000001.webp",
+  "obj": "measuring cup",
+  "screw": "lift, carry the top over the bowl, rotate 100 deg about the horizontal line through the top edge",
+  "command": "pour out the measuring cup"
+ },
+ {
+  "verb": "scoop",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "scoop"
+  ],
+  "demo_task": "scoop",
+  "new": false,
+  "clip": "S/scoop__obj_000001.webp",
+  "obj": "ladle",
+  "screw": "carry the head into the bowl at 45 deg, push down, curve out and up along a parabola",
+  "command": "scoop with the ladle"
+ },
+ {
+  "verb": "stir",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "stir"
+  ],
+  "demo_task": "stir",
+  "new": false,
+  "clip": "S/stir__obj_000021.webp",
+  "obj": "whisk",
+  "screw": "lift 15 cm, carry the head into the bowl, rotate 120 deg about the bowl's vertical axis",
+  "command": "stir the bowl with the whisk"
+ },
+ {
+  "verb": "mix",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "stir"
+  ],
+  "demo_task": "stir",
+  "new": false,
+  "clip": "S/stir__obj_000021.webp",
+  "obj": "whisk",
+  "screw": "lift 15 cm, carry the head into the bowl, rotate 120 deg about the bowl's vertical axis",
+  "command": "mix the bowl with the whisk"
+ },
+ {
+  "verb": "beat",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "stir"
+  ],
+  "demo_task": "stir",
+  "new": false,
+  "clip": "S/stir__obj_000021.webp",
+  "obj": "whisk",
+  "screw": "lift 15 cm, carry the head into the bowl, rotate 120 deg about the bowl's vertical axis",
+  "command": "beat the bowl with the whisk"
+ },
+ {
+  "verb": "shake",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "shake"
+  ],
+  "demo_task": "shake",
+  "new": false,
+  "clip": "X/shake__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "lift 15 cm, three +-5 cm vertical translations",
+  "command": "shake the adjustable wrench"
+ },
+ {
+  "verb": "jiggle",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "shake"
+  ],
+  "demo_task": "shake",
+  "new": false,
+  "clip": "X/shake__r_handal_adjustable_wrench_obj_000006.webp",
+  "obj": "adjustable wrench",
+  "screw": "lift 15 cm, three +-5 cm vertical translations",
+  "command": "jiggle the adjustable wrench"
+ },
+ {
+  "verb": "cut",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "cut"
+  ],
+  "demo_task": "cut",
+  "new": false,
+  "clip": "S/cut__101.webp",
+  "obj": "knife",
+  "screw": "lift 8 cm, translate 10 cm along the blade (thick -> thin end)",
+  "command": "cut with the knife"
+ },
+ {
+  "verb": "chop",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "cut"
+  ],
+  "demo_task": "cut",
+  "new": false,
+  "clip": "S/cut__101.webp",
+  "obj": "knife",
+  "screw": "lift 8 cm, translate 10 cm along the blade (thick -> thin end)",
+  "command": "chop with the knife"
+ },
+ {
+  "verb": "slice",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "cut"
+  ],
+  "demo_task": "cut",
+  "new": false,
+  "clip": "S/cut__101.webp",
+  "obj": "knife",
+  "screw": "lift 8 cm, translate 10 cm along the blade (thick -> thin end)",
+  "command": "slice with the knife"
+ },
+ {
+  "verb": "carve",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "cut"
+  ],
+  "demo_task": "cut",
+  "new": false,
+  "clip": "S/cut__101.webp",
+  "obj": "knife",
+  "screw": "lift 8 cm, translate 10 cm along the blade (thick -> thin end)",
+  "command": "carve with the knife"
+ },
+ {
+  "verb": "shear",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "cut"
+  ],
+  "demo_task": "cut",
+  "new": false,
+  "clip": "S/cut__101.webp",
+  "obj": "knife",
+  "screw": "lift 8 cm, translate 10 cm along the blade (thick -> thin end)",
+  "command": "shear with the knife"
+ },
+ {
+  "verb": "break",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "break"
+  ],
+  "demo_task": "break",
+  "new": true,
+  "clip": "V/break__kinova.webp",
+  "obj": "wooden spoon",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.6404669260700389,
+   "rise_cm": -0.2,
+   "snap_torque_Nm": 0.49,
+   "max_eq_force_N": 55.97,
+   "max_eq_torque_Nm": 0.49
+  },
+  "screw": "rotate 40 deg about the horizontal line through the clamped end (the clamp snaps at 4 N m)",
+  "command": "break the wooden spoon"
+ },
+ {
+  "verb": "crack",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "crack open the bottle cap"
+ },
+ {
+  "verb": "pierce",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "pierce"
+  ],
+  "demo_task": "pierce",
+  "new": true,
+  "clip": "V/pierce__kinova.webp",
+  "obj": "screwdriver",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.6686,
+   "rise_cm": -2.1,
+   "depth_cm": 2.2
+  },
+  "screw": "rotate 90 deg tip down, translate 6 cm along the tool axis into the target",
+  "command": "pierce the foam with the screwdriver"
+ },
+ {
+  "verb": "fork",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "fork"
+  ],
+  "demo_task": "fork",
+  "new": true,
+  "clip": "V/fork__kinova.webp",
+  "obj": "fork",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.54695,
+   "rise_cm": 7.8,
+   "food_rise_cm": 9.9,
+   "tip_to_food_cm": 0.43
+  },
+  "screw": "rotate 90 deg tip down, translate down into the food, translate 10 cm up",
+  "command": "fork the ball with the fork"
+ },
+ {
+  "verb": "load",
+  "synonyms": [],
+  "particles": [
+   "some machine"
+  ],
+  "group": "containers-devices",
+  "tasks": [
+   "hinge"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "load the box lid"
+ },
+ {
+  "verb": "unload",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "hinge"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "unload the box lid"
+ },
+ {
+  "verb": "open",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn",
+   "hinge",
+   "slide",
+   "squeeze",
+   "lift"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "open the box lid"
+ },
+ {
+  "verb": "close",
+  "synonyms": [
+   "shut"
+  ],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn",
+   "hinge",
+   "slide",
+   "squeeze"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "close the box lid"
+ },
+ {
+  "verb": "seal",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "seal the bottle cap"
+ },
+ {
+  "verb": "unseal",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "unseal the bottle cap"
+ },
+ {
+  "verb": "cover",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "hinge",
+   "slide"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "cover the box lid"
+ },
+ {
+  "verb": "uncover",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "hinge",
+   "slide",
+   "lift"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "uncover the box lid"
+ },
+ {
+  "verb": "wrap",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "wrap"
+  ],
+  "demo_task": "wrap",
+  "new": true,
+  "clip": "V/wrap__kinova.webp",
+  "obj": "foam brick",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "winding_deg": 323.0
+  },
+  "screw": "the object travels a helix about the post's vertical axis: 720 deg, 3 cm rise per turn, radius 20 -> 6 cm (hand orientation fixed)",
+  "command": "wrap the cable around the post"
+ },
+ {
+  "verb": "unwrap",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "unwrap"
+  ],
+  "demo_task": "unwrap",
+  "new": true,
+  "clip": "V/unwrap__kinova.webp",
+  "obj": "foam brick",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "winding_wrapped_deg": 323.0,
+   "winding_after_deg": 1.0
+  },
+  "screw": "the wrap helix, then its reverse (-720 deg)",
+  "command": "unwrap the cable from the post"
+ },
+ {
+  "verb": "lock",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "lock the bottle cap"
+ },
+ {
+  "verb": "unlock",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "turn"
+  ],
+  "demo_task": "turn",
+  "new": false,
+  "clip": "S/turn__101.webp",
+  "obj": "bottle cap",
+  "screw": "rotate 180 deg about the cap's own (spine) axis through the cap (revolute, pitch 0)",
+  "command": "unlock the bottle cap"
+ },
+ {
+  "verb": "turn on",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "press",
+   "turn"
+  ],
+  "demo_task": "press",
+  "new": false,
+  "clip": "S/press__101.webp",
+  "obj": "button",
+  "screw": "translate 7 mm into the body along the button's normal (prismatic, push)",
+  "command": "turn on the button"
+ },
+ {
+  "verb": "turn off",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "press",
+   "turn"
+  ],
+  "demo_task": "press",
+  "new": false,
+  "clip": "S/press__101.webp",
+  "obj": "button",
+  "screw": "translate 7 mm into the body along the button's normal (prismatic, push)",
+  "command": "turn off the button"
+ },
+ {
+  "verb": "switch",
+  "synonyms": [],
+  "particles": [
+   "places"
+  ],
+  "group": "containers-devices",
+  "tasks": [
+   "switch"
+  ],
+  "demo_task": "switch",
+  "new": true,
+  "clip": "V/switch__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "A_to_Bstart_cm": 0.3,
+   "B_to_Astart_cm": 0.5
+  },
+  "screw": "A: translate aside; B: translate to A's spot; A: translate to B's spot (three place screws)",
+  "command": "switch the places of the gelatin box and the blue block"
+ },
+ {
+  "verb": "switch on",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "press",
+   "turn"
+  ],
+  "demo_task": "press",
+  "new": false,
+  "clip": "S/press__101.webp",
+  "obj": "button",
+  "screw": "translate 7 mm into the body along the button's normal (prismatic, push)",
+  "command": "switch on the button"
+ },
+ {
+  "verb": "switch off",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "press",
+   "turn"
+  ],
+  "demo_task": "press",
+  "new": false,
+  "clip": "S/press__101.webp",
+  "obj": "button",
+  "screw": "translate 7 mm into the body along the button's normal (prismatic, push)",
+  "command": "switch off the button"
+ },
+ {
+  "verb": "insert",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "insert"
+  ],
+  "demo_task": "insert",
+  "new": false,
+  "clip": "V/insert__r_ycbv_061_foam_brick__x.webp",
+  "obj": "foam brick",
+  "screw": "lift, translate over the slot, translate 7 cm down into it",
+  "command": "insert the foam brick into the slot"
+ },
+ {
+  "verb": "plug",
+  "synonyms": [],
+  "particles": [
+   "in"
+  ],
+  "group": "containers-devices",
+  "tasks": [
+   "insert"
+  ],
+  "demo_task": "insert",
+  "new": false,
+  "clip": "V/insert__r_ycbv_061_foam_brick__x.webp",
+  "obj": "foam brick",
+  "screw": "lift, translate over the slot, translate 7 cm down into it",
+  "command": "plug in the foam brick"
+ },
+ {
+  "verb": "unplug",
+  "synonyms": [],
+  "particles": [],
+  "group": "containers-devices",
+  "tasks": [
+   "unplug"
+  ],
+  "demo_task": "unplug",
+  "new": true,
+  "clip": "V/unplug__kinova.webp",
+  "obj": "foam brick",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 0.6,
+   "rise_cm": 14.3,
+   "above_slot_cm": 10.3
+  },
+  "screw": "translate up 15 cm along the slot axis",
+  "command": "unplug the foam brick"
+ },
+ {
+  "verb": "screw",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "fasten"
+  ],
+  "demo_task": "fasten",
+  "new": false,
+  "clip": "F/fasten__obj_000001_loosen.webp",
+  "obj": "screwdriver",
+  "screw": "lift 30 cm, helix -90 deg about the screwdriver shaft",
+  "command": "screw in with the screwdriver"
+ },
+ {
+  "verb": "unscrew",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "fasten"
+  ],
+  "demo_task": "fasten",
+  "new": false,
+  "clip": "F/fasten__obj_000001_loosen.webp",
+  "obj": "screwdriver",
+  "screw": "lift 30 cm, helix -90 deg about the screwdriver shaft",
+  "command": "unscrew with the screwdriver"
+ },
+ {
+  "verb": "loosen",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "squeeze",
+   "fasten"
+  ],
+  "demo_task": "fasten",
+  "new": false,
+  "clip": "F/fasten__obj_000001_loosen.webp",
+  "obj": "screwdriver",
+  "screw": "lift 30 cm, helix -90 deg about the screwdriver shaft",
+  "command": "loosen the screw with the screwdriver"
+ },
+ {
+  "verb": "tighten",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "squeeze",
+   "fasten"
+  ],
+  "demo_task": "fasten",
+  "new": false,
+  "clip": "F/fasten__obj_000001_loosen.webp",
+  "obj": "screwdriver",
+  "screw": "lift 30 cm, helix -90 deg about the screwdriver shaft",
+  "command": "tighten the screw with the screwdriver"
+ },
+ {
+  "verb": "fasten",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "fasten"
+  ],
+  "demo_task": "fasten",
+  "new": false,
+  "clip": "F/fasten__obj_000001_loosen.webp",
+  "obj": "screwdriver",
+  "screw": "lift 30 cm, helix -90 deg about the screwdriver shaft",
+  "command": "fasten the screw with the screwdriver"
+ },
+ {
+  "verb": "unfasten",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "fasten"
+  ],
+  "demo_task": "fasten",
+  "new": false,
+  "clip": "F/fasten__obj_000001_loosen.webp",
+  "obj": "screwdriver",
+  "screw": "lift 30 cm, helix -90 deg about the screwdriver shaft",
+  "command": "unfasten the screw with the screwdriver"
+ },
+ {
+  "verb": "hammer",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "swing"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "hammer with the hammer"
+ },
+ {
+  "verb": "drive",
+  "synonyms": [],
+  "particles": [
+   "it in"
+  ],
+  "group": "tools-assembly",
+  "tasks": [
+   "swing"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "drive the nail in with the hammer"
+ },
+ {
+  "verb": "hit",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "swing",
+   "press"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "hit it with the hammer"
+ },
+ {
+  "verb": "chisel",
+  "synonyms": [
+   "carve"
+  ],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "chisel"
+  ],
+  "demo_task": "chisel",
+  "new": true,
+  "clip": "V/chisel__kinova.webp",
+  "obj": "screwdriver",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.6686,
+   "moved_cm": 29.8,
+   "rise_cm": -0.0,
+   "contact_frac": 1.0
+  },
+  "screw": "rotate 30 deg tip down, translate down to the block, translate 6 cm along it",
+  "command": "chisel the block with the screwdriver"
+ },
+ {
+  "verb": "twist",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "turn",
+   "twist",
+   "fasten"
+  ],
+  "demo_task": "twist",
+  "new": false,
+  "clip": "X/twist__r_handal_adjustable_wrench_obj_000037.webp",
+  "obj": "adjustable wrench",
+  "screw": "lift 10 cm, helix 90 deg about the vertical through the wrench's jaw end",
+  "command": "twist the adjustable wrench"
+ },
+ {
+  "verb": "bend",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "bend"
+  ],
+  "demo_task": "bend",
+  "new": true,
+  "clip": "V/bend__kinova.webp",
+  "obj": "foam brick",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "bend_deg": 90.0
+  },
+  "screw": "rotate 90 deg about the vertical line through the clamped end while the ends close 40 % (a spiral; pitch 0)",
+  "command": "bend the cable"
+ },
+ {
+  "verb": "wrench",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "twist"
+  ],
+  "demo_task": "twist",
+  "new": false,
+  "clip": "X/twist__r_handal_adjustable_wrench_obj_000037.webp",
+  "obj": "adjustable wrench",
+  "screw": "lift 10 cm, helix 90 deg about the vertical through the wrench's jaw end",
+  "command": "wrench the nut with the adjustable wrench"
+ },
+ {
+  "verb": "pluck",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "pluck"
+  ],
+  "demo_task": "pluck",
+  "new": true,
+  "clip": "V/pluck__kinova.webp",
+  "obj": "pear",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "rise_cm": 11.2,
+   "snap_force_N": 14.0
+  },
+  "screw": "translate up (the stem snaps at 8 N)",
+  "command": "pluck the pear"
+ },
+ {
+  "verb": "join",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "join"
+  ],
+  "demo_task": "join",
+  "new": true,
+  "clip": "V/join__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 23.0,
+   "rise_cm": 0.0,
+   "gap_cm": 0.5
+  },
+  "screw": "translate until the object's face meets the block's side face",
+  "command": "join the gelatin box to the block"
+ },
+ {
+  "verb": "glue",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "glue"
+  ],
+  "demo_task": "glue",
+  "new": true,
+  "clip": "V/glue__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 31.7,
+   "rise_cm": 6.0,
+   "above_block_cm": -0.0
+  },
+  "screw": "translate onto the block, translate 5 mm down (press), release",
+  "command": "glue the gelatin box onto the block"
+ },
+ {
+  "verb": "weld",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "weld"
+  ],
+  "demo_task": "weld",
+  "new": true,
+  "clip": "V/weld__kinova.webp",
+  "obj": "screwdriver",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.6686,
+   "moved_cm": 28.3,
+   "rise_cm": 1.2,
+   "standoff_frac": 1.0
+  },
+  "screw": "translate along the seam line (10 cm) at fixed standoff",
+  "command": "weld the seam with the screwdriver"
+ },
+ {
+  "verb": "drill",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "drill"
+  ],
+  "demo_task": "drill",
+  "new": true,
+  "clip": "V/drill__kinova.webp",
+  "obj": "screwdriver",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.8938,
+   "rise_cm": -2.8,
+   "depth_cm": 3.0,
+   "turned_deg": 120.0
+  },
+  "screw": "rotate 90 deg tip down, helix about the tool axis: 180 deg with 3 cm feed (pitch 6 cm/rev... 1.9 cm/rad)",
+  "command": "drill into the foam with the screwdriver"
+ },
+ {
+  "verb": "measure",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "measure"
+  ],
+  "demo_task": "measure",
+  "new": false,
+  "clip": "X/measure__r_proc_ruler.webp",
+  "obj": "ruler",
+  "screw": "turn the ruler parallel to the box edge (rotate about vertical), lay it 1 cm from the edge, release",
+  "success": {
+   "this clip": false
+  },
+  "command": "measure the box with the ruler"
+ },
+ {
+  "verb": "assemble",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "assemble"
+  ],
+  "demo_task": "assemble",
+  "new": true,
+  "clip": "V/assemble__kinova.webp",
+  "obj": "foam brick",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "rise_cm": 0.6,
+   "depth_cm": 3.4,
+   "turned_deg": 90.0
+  },
+  "screw": "translate over the slot, translate 7 cm down, rotate 90 deg about the slot's vertical axis",
+  "command": "assemble the foam brick into the socket"
+ },
+ {
+  "verb": "disassemble",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "disassemble"
+  ],
+  "demo_task": "disassemble",
+  "new": true,
+  "clip": "V/disassemble__kinova.webp",
+  "obj": "foam brick",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "rise_cm": 14.7,
+   "above_slot_cm": 10.7,
+   "turned_deg": 89.0
+  },
+  "screw": "rotate -90 deg about the slot's vertical axis, translate 15 cm up",
+  "command": "take the foam brick out of the socket"
+ },
+ {
+  "verb": "fold",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "hinge"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "fold the box lid"
+ },
+ {
+  "verb": "unfold",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "hinge"
+  ],
+  "demo_task": "hinge",
+  "new": false,
+  "clip": "S/hinge__101.webp",
+  "obj": "box lid",
+  "screw": "rotate 70 deg about the hinge line at the lid's far top edge (revolute, pitch 0)",
+  "command": "unfold the box lid"
+ },
+ {
+  "verb": "tap",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "press",
+   "swing"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "tap it with the hammer"
+ },
+ {
+  "verb": "knock",
+  "synonyms": [],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "swing"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "knock with the hammer"
+ },
+ {
+  "verb": "strike",
+  "synonyms": [
+   "whack",
+   "slam"
+  ],
+  "particles": [],
+  "group": "tools-assembly",
+  "tasks": [
+   "swing"
+  ],
+  "demo_task": "swing",
+  "new": false,
+  "clip": "S/swing__obj_000005.webp",
+  "obj": "hammer",
+  "screw": "lift 15 cm, rotate 40 deg about the axis perpendicular to the tool through its centre of percussion, head down",
+  "command": "strike with the hammer"
+ },
+ {
+  "verb": "surround",
+  "synonyms": [],
+  "particles": [],
+  "group": "aggregate",
+  "tasks": [
+   "surround"
+  ],
+  "demo_task": "surround",
+  "new": true,
+  "clip": "V/surround__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 0.2,
+   "rise_cm": 9.7,
+   "swept_deg": 359.0
+  },
+  "screw": "rotate 360 deg about the post's vertical axis (pitch 0)",
+  "command": "carry the gelatin box around the post"
+ },
+ {
+  "verb": "corral",
+  "synonyms": [],
+  "particles": [],
+  "group": "aggregate",
+  "tasks": [
+   "corral"
+  ],
+  "demo_task": "corral",
+  "new": true,
+  "clip": "V/corral__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": false
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 26.8,
+   "rise_cm": 0.0,
+   "to_pen_cm": 0.2
+  },
+  "screw": "translate along the table into the pen",
+  "command": "corral the gelatin box into the pen"
+ },
+ {
+  "verb": "gather",
+  "synonyms": [],
+  "particles": [],
+  "group": "aggregate",
+  "tasks": [
+   "gather"
+  ],
+  "demo_task": "gather",
+  "new": true,
+  "clip": "V/gather__kinova.webp",
+  "obj": "gelatin box",
+  "robot": "kinova",
+  "success": {
+   "kinova": true,
+   "panda": true
+  },
+  "meas": {
+   "grasp_handle_frac": 0.0,
+   "moved_cm": 26.8,
+   "rise_cm": 0.0,
+   "to_target_cm": 0.2
+  },
+  "screw": "translate along the table to the target point",
+  "command": "gather the gelatin box to the pad"
+ },
+ {
+  "verb": "dump",
+  "synonyms": [],
+  "particles": [],
+  "group": "aggregate",
+  "tasks": [
+   "pour"
+  ],
+  "demo_task": "pour",
+  "new": false,
+  "clip": "X/pour__r_handal_measuring_cup_obj_000001.webp",
+  "obj": "measuring cup",
+  "screw": "lift, carry the top over the bowl, rotate 100 deg about the horizontal line through the top edge",
+  "command": "dump the measuring cup"
+ }
+]
